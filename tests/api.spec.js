@@ -10,10 +10,10 @@ test('Login API Test', async () => {
     }
   });
 
-  // Status code check
+ 
   expect(response.status()).toBe(201);
 
-  // Response body check
+  
   const body = await response.json();
   expect(body.username).toBe('standard_user');
 
@@ -26,10 +26,10 @@ test('Get Products API Test', async () => {
 
   const response = await apiContext.get('https://jsonplaceholder.typicode.com/posts');
 
-  // Status code check
+  
   expect(response.status()).toBe(200);
 
-  // Response body check
+ 
   const body = await response.json();
   expect(body.length).toBeGreaterThan(0);
 
